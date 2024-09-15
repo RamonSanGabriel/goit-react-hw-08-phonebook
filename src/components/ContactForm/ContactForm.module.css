@@ -1,0 +1,29 @@
+.form {
+  width: 400px;
+  padding: 8px;
+  border: 1px solid #2a2a2a;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 30px 0;
+}
+
+.formField {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.formLabel {
+  font-size: 20px;
+  margin: 10px auto;
+}
+
+.formButton {
+  width: 100px;
+  border: 1px solid #2a2a2a;
+  border-radius: 5px;
+}
