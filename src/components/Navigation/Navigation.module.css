@@ -1,0 +1,13 @@
+.link {
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--DARK);
+  font-weight: 500;
+}
+
+.linkActive {
+  composes: link;
+  color: var(--PRIMARY);
+  font-weight: 800;
+}

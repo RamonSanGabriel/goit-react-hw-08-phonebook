@@ -6,7 +6,7 @@ import {
   selectFilteredContacts,
 } from '../../redux/contacts/contactsSelector';
 import { fetchContacts } from '../../redux/contacts/contactsOperations';
-import { Loader } from 'components/Loader/Loader';
+import { Loader } from '../Loader/Loader';
 import { ContactListItem } from 'components/ContactListItem/ContactListItem';
 
 export const ContactList = () => {
