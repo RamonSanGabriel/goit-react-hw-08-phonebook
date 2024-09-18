@@ -7,7 +7,7 @@ const ContactsPage = () => {
   return (
     <HelmetProvider>
       <Helmet>
-        <title>Phonebook</title>
+        <title>Contacts</title>
       </Helmet>
       <ContactForm />
       <h2>Contacts</h2>

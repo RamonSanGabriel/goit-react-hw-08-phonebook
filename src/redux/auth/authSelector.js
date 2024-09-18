@@ -5,7 +5,7 @@ export const selectUser = state => state.auth.user;
 export const selectIsRefresh = state => state.auth.isRefresh;
 
 export const handleAuthRejected = (state, action) => {
-  state.isLoggedIn = false;
+  state.isLoading = false;
   state.isError = true;
 };
 export const handleAuthFulfilled = (state, action) => {
@@ -15,7 +15,7 @@ export const handleAuthFulfilled = (state, action) => {
 };
 
 export const handleAuthPending = state => {
-  state.isRefresh = true;
+  state.isLoading = true;
 };
 
 export const handleLogOutAuthFulfilled = state => {
@@ -24,6 +24,9 @@ export const handleLogOutAuthFulfilled = state => {
   state.isLoggedIn = false;
 };
 
+export const handleRefreshPending = state => {
+  state.isRefresh = true;
+};
 export const handleRefreshFulfilled = (state, action) => {
   state.user = action.payload;
   state.isLoggedIn = true;

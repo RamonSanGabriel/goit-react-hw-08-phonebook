@@ -11,7 +11,7 @@ const handlePending = state => {
 };
 const handleRejected = (state, action) => {
   state.isLoading = false;
-  state.isError = action.error.message;
+  state.isError = action.e.message;
 };
 
 const handleFetchFulfilled = (state, action) => {
