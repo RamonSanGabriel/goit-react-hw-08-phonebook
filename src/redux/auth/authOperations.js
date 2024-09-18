@@ -4,12 +4,14 @@ import axios from 'axios';
 axios.defaults.baseURL = 'https://connections-api.goit.global/';
 
 const setAuth = token => {
-  axios.defaults.headers.common.Authorization = 'Bearer ${token}';
+  axios.defaults.headers.common.Authorization = `Bearer ${token}`;
 };
+
 // Utility to remove JWT
 const removeAuth = () => {
   axios.defaults.headers.common.Authorization = '';
 };
+
 /* POST @ /users/signup
 body: {name, email, password} */
 export const register = createAsyncThunk(
@@ -42,7 +44,7 @@ export const logIn = createAsyncThunk(
   }
 );
 
-export const logOut = createAsyncThunk('auth/logOut', async (_, thunkAPI) => {
+export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
   try {
     await axios.post(`/users/logout`);
     removeAuth();
@@ -58,7 +60,8 @@ export const refreshUser = createAsyncThunk(
     const persistedToken = state.auth.token;
 
     if (persistedToken === null) {
-      return thunkAPI.rejectWithValue('No token found');
+      //if there is no token, exit without performing any request
+      return thunkAPI.rejectWithValue('Unable to fetch user');
     }
     try {
       // if there is a token, add it to the HTTP header and perform the request

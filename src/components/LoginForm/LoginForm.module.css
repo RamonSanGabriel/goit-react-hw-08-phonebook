@@ -1,0 +1,35 @@
+.form {
+  width: 320px;
+  margin-top: 20px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.loginFormInput {
+  margin-top: 5px;
+  transition: border 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.loginFormInput:hover,
+.loginFormInput:active {
+  outline: none;
+  border: 2px solid #4a6ce8;
+}
+
+.loginBtn {
+  padding: 5px 10px;
+  transition: border-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1),
+    background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1),
+    color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.loginBtn:hover,
+.loginFormBtn:active {
+  border-color: #4a6ce8;
+  background-color: #4a84e7;
+  color: white;
+}

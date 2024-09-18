@@ -1,0 +1,35 @@
+.form {
+  width: 320px;
+  margin-top: 20px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.registerFormInput {
+  margin-top: 5px;
+  transition: border 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.registerFormInput:hover,
+.registerFormInput:active {
+  outline: none;
+  border: 2px solid #4a72e8;
+}
+
+.registerFormBtn {
+  padding: 5px 10px;
+  transition: border-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1),
+    background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1),
+    color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.registerFormBtn:hover,
+.registerFormBtn:active {
+  border-color: #4a72e8;
+  background-color: #4a72e7;
+  color: white;
+}
