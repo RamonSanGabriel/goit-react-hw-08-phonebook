@@ -13,15 +13,15 @@ import {
 const authSlice = createSlice({
   name: 'auth',
   initialState: {
-    user: { email: null, password: null },
+    user: { name: null, email: null },
     token: null,
     isLoggedIn: false,
     isRefresh: false,
-    isLoading: false,
-    isError: false,
+    /*  isLoading: false,
+    isError: false, */
   },
   // reducers: {
-  extraReducers: builder =>
+  extraReducers: builder => {
     builder
       .addCase(register.pending, handleAuthPending)
       .addCase(register.fulfilled, handleAuthFulfilled)
@@ -34,7 +34,8 @@ const authSlice = createSlice({
       .addCase(logOut.rejected, handleAuthRejected)
       .addCase(refreshUser.pending, handleRefreshPending)
       .addCase(refreshUser.fulfilled, handleRefreshFulfilled)
-      .addCase(refreshUser.rejected, handleRefreshRejected),
+      .addCase(refreshUser.rejected, handleRefreshRejected);
+  },
 
   // },
 });

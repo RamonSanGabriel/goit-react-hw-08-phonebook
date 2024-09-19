@@ -1,4 +1,4 @@
-import RegisterForm from 'components/RegisterForm/RegisterForm';
+import { RegisterForm } from '../../RegisterForm/RegisterForm';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const RegisterPage = () => {
@@ -7,7 +7,7 @@ const RegisterPage = () => {
       {''}
       <HelmetProvider>
         <Helmet>
-          <title>Registration Page</title>
+          <title>Registration</title>
         </Helmet>
         <RegisterForm />
       </HelmetProvider>

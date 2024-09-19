@@ -14,7 +14,7 @@ export const handleAuthFulfilled = (state, action) => {
   state.isLoggedIn = true;
 };
 
-export const handleAuthPending = state => {
+export const handleAuthPending = (state, _action) => {
   state.isLoading = true;
 };
 

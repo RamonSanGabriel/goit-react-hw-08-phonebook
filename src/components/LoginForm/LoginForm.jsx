@@ -24,10 +24,12 @@ export const LoginForm = () => {
         Email
         <input className={css.loginFormInput} type="email" name="email" />
       </label>
+
       <label className={css.label}>
         Password
         <input className={css.loginFormInput} type="password" name="password" />
       </label>
+
       <button className={css.loginBtn} type="submit">
         Log In
       </button>
