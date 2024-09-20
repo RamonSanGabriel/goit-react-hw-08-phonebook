@@ -6,7 +6,7 @@ export const Navigation = () => {
   const { isLoggedIn } = useAuth();
 
   return (
-    <nav>
+    <nav className={css.header}>
       <NavLink
         to="/"
         className={({ isActive }) => (isActive ? css.linkActive : css.link)}
