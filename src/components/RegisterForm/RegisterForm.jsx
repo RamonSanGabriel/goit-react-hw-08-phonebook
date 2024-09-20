@@ -8,17 +8,16 @@ export const RegisterForm = () => {
   const handleRegisterSubmit = e => {
     e.preventDefault();
 
-    const registerForm = e.currentTarget;
+    const form = e.currentTarget;
     dispatch(
       register({
-        name: registerForm.elements.name.value,
-        email: registerForm.elements.email.value,
-        password: registerForm.elements.password.value,
+        name: form.elements.name.value,
+        email: form.elements.email.value,
+        password: form.elements.password.value,
       })
     );
-    registerForm.reset();
+    form.reset();
   };
-
   return (
     <form
       className={css.form}
@@ -27,12 +26,12 @@ export const RegisterForm = () => {
     >
       <label className={css.label}>
         Username
-        <input className={css.registerFormInput} type="text" email="name" />
+        <input className={css.registerFormInput} type="text" name="name" />
       </label>
 
       <label className={css.label}>
         Email
-        <input className={css.registerFormInput} type="email" email="email" />
+        <input className={css.registerFormInput} type="email" name="email" />
       </label>
 
       <label className={css.label}>
@@ -40,13 +39,11 @@ export const RegisterForm = () => {
         <input
           className={css.registerFormInput}
           type="password"
-          email="password"
+          name="password"
         />
       </label>
 
-      <button className={css.registerFromBtn} type="submit">
-        Register
-      </button>
+      <button type="submit">Register</button>
     </form>
   );
 };

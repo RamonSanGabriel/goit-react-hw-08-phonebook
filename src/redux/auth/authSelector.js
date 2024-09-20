@@ -35,6 +35,6 @@ export const handleRefreshFulfilled = (state, action) => {
 
 export const handleRefreshRejected = state => {
   state.isRefresh = false;
-  state.isError = true;
-  state.isLoggedIn = false;
+  // state.isError = true;
+  // state.isLoggedIn = false;
 };

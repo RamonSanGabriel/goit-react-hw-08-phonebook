@@ -23,21 +23,19 @@ const authSlice = createSlice({
   // reducers: {
   extraReducers: builder => {
     builder
-      .addCase(register.pending, handleAuthPending)
       .addCase(register.fulfilled, handleAuthFulfilled)
-      .addCase(register.rejected, handleAuthRejected)
-      .addCase(logIn.pending, handleAuthPending)
       .addCase(logIn.fulfilled, handleAuthFulfilled)
-      .addCase(logIn.rejected, handleAuthRejected)
-      .addCase(logOut.pending, handleAuthPending)
       .addCase(logOut.fulfilled, handleLogOutAuthFulfilled)
-      .addCase(logOut.rejected, handleAuthRejected)
       .addCase(refreshUser.pending, handleRefreshPending)
       .addCase(refreshUser.fulfilled, handleRefreshFulfilled)
       .addCase(refreshUser.rejected, handleRefreshRejected);
+    // .addCase(register.pending, handleAuthPending)
+    // .addCase(register.rejected, handleAuthRejected)
+    // .addCase(logIn.pending, handleAuthPending)
+    // .addCase(logIn.rejected, handleAuthRejected)
+    // .addCase(logOut.pending, handleAuthPending)
+    // .addCase(logOut.rejected, handleAuthRejected)
   },
-
-  // },
 });
 // export const { logIn, logOut, refreshUser } = authSlice.actions;
 export const authReducer = authSlice.reducer;
