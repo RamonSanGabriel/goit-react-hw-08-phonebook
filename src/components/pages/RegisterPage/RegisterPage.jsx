@@ -4,7 +4,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 const RegisterPage = () => {
   return (
     <div style={{ padding: '20px' }}>
-      {''}
+      {/* {''} */}
       <HelmetProvider>
         <Helmet>
           <title>Registration</title>
