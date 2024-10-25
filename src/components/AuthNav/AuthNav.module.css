@@ -1,18 +1,3 @@
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 8px 0;
-  margin-bottom: 16px;
-  border-bottom: 1px solid var(--DARK);
-
-  > nav {
-    display: flex;
-    gap: 30px;
-  }
-}
-
 .link {
   padding: 8px 16px;
   border-radius: 4px;
@@ -23,6 +8,7 @@
 
 .linkActive {
   composes: link;
-  color: var(--PRIMARY);
+  /* color: var(--PRIMARY); */
   font-weight: 800;
+  color: #fd8b51;
 }

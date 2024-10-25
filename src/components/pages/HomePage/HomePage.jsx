@@ -1,4 +1,5 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import css from './HomePage.module.css';
 
 const HomePage = () => {
   return (
@@ -6,8 +7,11 @@ const HomePage = () => {
       <Helmet>
         <title>Home Page</title>
       </Helmet>
-      <div>
-        <h1>Welcome to Home Page </h1>
+      <div className={css.container}>
+        <h1>
+          Welcome to <span className={css.spanPhone}>Phone</span>
+          <span class={css.spanBook}>book</span>
+        </h1>
       </div>
     </HelmetProvider>
   );

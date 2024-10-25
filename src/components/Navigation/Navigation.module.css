@@ -2,13 +2,13 @@
   padding: 8px 16px;
   border-radius: 4px;
   text-decoration: none;
-  color: grey;
+  color: var(--PRIMARY);
   font-weight: 500;
 }
 
 .linkActive {
   composes: link;
-  color: tomato;
+  color: #fd8b51;
   font-weight: 800;
 }
 
@@ -16,6 +16,6 @@
   display: flex;
   /* justify-content: space-between; */
   align-items: center;
-  margin-bottom: 16px;
-  border-bottom: 1px solid #2a363b;
+  /* margin-bottom: 16px; */
+  /* border-bottom: 1px solid #2a363b; */
 }
