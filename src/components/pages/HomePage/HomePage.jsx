@@ -10,7 +10,7 @@ const HomePage = () => {
       <div className={css.container}>
         <h1>
           Welcome to <span className={css.spanPhone}>Phone</span>
-          <span class={css.spanBook}>book</span>
+          <span className={css.spanBook}>book</span>
         </h1>
       </div>
     </HelmetProvider>

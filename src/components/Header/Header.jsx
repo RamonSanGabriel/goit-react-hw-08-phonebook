@@ -7,7 +7,7 @@ import css from './Header.module.css';
 export const Header = () => {
   const { isLoggedIn } = useAuth();
   return (
-    <header className={css.headerstyle}>
+    <header className={css.headerStyle}>
       <Navigation />
       {isLoggedIn ? <UserMenu /> : <AuthNav />}
     </header>
